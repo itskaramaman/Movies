@@ -1,0 +1,16 @@
+.header {
+  background-color: #333;
+  text-align: center;
+  padding: 10px;
+  color: white;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  font-size: large;
+}
+
+.link:hover {
+  color: orange;
+}
