@@ -1,10 +1,8 @@
 const express = require("express");
+const routes = express.Router();
 
-const router = express.Router();
+const { getMovies, postMovie } = require("../controller/Movie");
 
-router
-  .route("/")
-  .get((req, res) => res.send("Get method for Movies"))
-  .post((req, res) => res.send("Post request for movies"));
+routes.route("/").get(getMovies).post(postMovie);
 
-module.exports = router;
+module.exports = routes;
