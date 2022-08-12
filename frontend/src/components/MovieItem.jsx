@@ -6,7 +6,7 @@ const MovieItem = (props) => {
   const [favourite, setFavourite] = useState(false);
 
   const addToFavoriteHandler = async (movie) => {
-    const response = await fetch("http://localhost:5000/api/movies", {
+    await fetch("http://localhost:5000/api/movies", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
