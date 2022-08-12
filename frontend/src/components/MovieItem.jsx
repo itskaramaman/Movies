@@ -13,7 +13,6 @@ const MovieItem = (props) => {
       },
       body: JSON.stringify(movie),
     });
-    console.log(response);
     setFavourite(true);
   };
 
@@ -30,7 +29,7 @@ const MovieItem = (props) => {
           <i>Release Date: {props.movie.release_date}</i>
         </Card.Text>
         <button onClick={() => addToFavoriteHandler(props.movie)}>
-          Add to Favourites
+          {favourite ? "Favourited" : "Add To Favourite"}
         </button>
       </Card.Body>
     </Card>
